@@ -5,10 +5,69 @@
              Title="Add+"
              BackgroundColor="Black"
              Padding="20">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <VerticalStackLayout Spacing="15">
+        <Border Stroke="darkred" StrokeShape="RoundRectangle 50" StrokeThickness="3" Padding="20" BackgroundColor="Black">
+        <Grid>
+        <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Label Text="+" TextColor="DarkRed" FontSize="50" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <Label Text="Expense" Grid.Column="1" FontSize="40" VerticalOptions="Center" TextColor="DarkRed"/>
+        <Button x:Name="ExpensesButton" BackgroundColor="Transparent"
+                                Grid.ColumnSpan="2" Grid.RowSpan="2"></Button>
+        </Grid>
+        </Border>
+
+        <Border Stroke="DarkGreen" StrokeShape="RoundRectangle 50" StrokeThickness="3" Padding="20" BackgroundColor="Black">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="+" TextColor="DarkGreen" FontSize="50" VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Label Text="Earning" Grid.Column="1" FontSize="40" VerticalOptions="Center" TextColor="DarkGreen"/>
+                <Button BackgroundColor="Transparent"
+                                Grid.ColumnSpan="2" Grid.RowSpan="2"></Button>
+            </Grid>
+        </Border>
+
+        <Border Stroke="orange" StrokeShape="RoundRectangle 50" StrokeThickness="3" Padding="20" BackgroundColor="Black">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="+" TextColor="orange" FontSize="50" VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Label Text="Note" Grid.Column="1" FontSize="40" VerticalOptions="Center" TextColor="Orange"/>
+                <Button BackgroundColor="Transparent"
+                                Grid.ColumnSpan="2" Grid.RowSpan="2"></Button>
+            </Grid>
+        </Border>
+
+        <Border Stroke="purple" StrokeShape="RoundRectangle 50" StrokeThickness="3" Padding="20" BackgroundColor="Black">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="+" TextColor="purple" FontSize="50" VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Label Text="Reminder" Grid.Column="1" FontSize="40" VerticalOptions="Center" TextColor="purple"/>
+                <Button BackgroundColor="Transparent"
+                                Grid.ColumnSpan="2" Grid.RowSpan="2"></Button>
+            </Grid>
+        </Border>
     </VerticalStackLayout>
 </ContentPage>
