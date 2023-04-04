@@ -6,7 +6,7 @@
              BackgroundColor="Black"
              Padding="20">
     <VerticalStackLayout Spacing="15">
-        <Border Stroke="darkred" StrokeShape="RoundRectangle 50" StrokeThickness="3" Padding="20" BackgroundColor="Black">
+        <Border Stroke="darkred" StrokeShape="RoundRectangle 50" StrokeThickness="2" Padding="20" BackgroundColor="Black">
         <Grid>
         <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
@@ -22,7 +22,7 @@
         </Grid>
         </Border>
 
-        <Border Stroke="DarkGreen" StrokeShape="RoundRectangle 50" StrokeThickness="3" Padding="20" BackgroundColor="Black">
+        <Border Stroke="DarkGreen" StrokeShape="RoundRectangle 50" StrokeThickness="2" Padding="20" BackgroundColor="Black">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -38,7 +38,7 @@
             </Grid>
         </Border>
 
-        <Border Stroke="orange" StrokeShape="RoundRectangle 50" StrokeThickness="3" Padding="20" BackgroundColor="Black">
+        <Border Stroke="orange" StrokeShape="RoundRectangle 50" StrokeThickness="2" Padding="20" BackgroundColor="Black">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -54,7 +54,7 @@
             </Grid>
         </Border>
 
-        <Border Stroke="purple" StrokeShape="RoundRectangle 50" StrokeThickness="3" Padding="20" BackgroundColor="Black">
+        <Border Stroke="purple" StrokeShape="RoundRectangle 50" StrokeThickness="2" Padding="20" BackgroundColor="Black">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>

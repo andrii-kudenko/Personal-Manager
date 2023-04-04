@@ -2,11 +2,52 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PersonalManager.Views.ElementPages.AddEarningPage"
-             Title="AddEarningPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="AddEarningPage"             
+             BackgroundColor="Black"
+             Padding="30">
+    <VerticalStackLayout Spacing="20">
+        <Label Text="Add Earning" FontSize="40" HorizontalOptions="Center" TextColor="WhiteSmoke"/>
+        <Border Stroke="darkgreen" StrokeShape="RoundRectangle 25" StrokeThickness="3" Padding="30" BackgroundColor="Black" MinimumHeightRequest="450">
+            <Grid RowSpacing="30">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="1.5*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="+" TextColor="DimGray" FontSize="50"
+                       VerticalOptions="Center" HorizontalOptions="Center"/>
+                    <Border BackgroundColor="Transparent" StrokeShape="RoundRectangle 60" MinimumWidthRequest="225"
+                            Stroke="DimGray" >
+                        <Entry BackgroundColor="Transparent" FontSize="20" Keyboard="Numeric"
+                               PlaceholderColor="DimGray" TextColor="White" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                    </Border>
+                </HorizontalStackLayout>
+                <VerticalStackLayout Grid.Row="1" Spacing="10">
+                    <Label Text="Choose Category" TextColor="DimGray" HorizontalOptions="Center" FontSize="Large"
+                       VerticalOptions="Center"/>
+                    <Border Stroke="dimgray" BackgroundColor="Transparent" StrokeThickness="1"
+                            StrokeShape="RoundRectangle 60" MinimumWidthRequest="225">
+                        <Picker x:Name="CategoryPicker" HorizontalTextAlignment="Center" VerticalOptions="Center"
+                         TextColor="White" FontSize="20">
+                            <Picker.Items>
+                                <x:String>FAST</x:String>
+                                <x:String>FAAD</x:String>
+                                <x:String>FAHAS</x:String>
+                                <x:String>FAHCS</x:String>
+                                <x:String>PSB</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </Border>
+                </VerticalStackLayout>
+                <Border Grid.Row="2" BackgroundColor="Transparent" Padding="15" StrokeThickness="1" StrokeShape="RoundRectangle 20" Stroke="dimgray">
+                    <Editor FontSize="Small" Placeholder="Provide some details" PlaceholderColor="DimGrey" WidthRequest="200" TextColor="White"/>
+                </Border>
+            </Grid>
+        </Border>
+        <Button BackgroundColor="DarkGreen" Text="Add" CornerRadius="20" FontSize="Medium"/>
     </VerticalStackLayout>
 </ContentPage>

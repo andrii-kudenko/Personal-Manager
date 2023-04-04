@@ -2,11 +2,38 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PersonalManager.Views.ElementPages.AddReminderPage"
-             Title="AddReminderPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="AddReminderPage"
+             BackgroundColor="Black"
+             Padding="30">
+    <VerticalStackLayout Spacing="20">
+        <Label Text="Add Note" FontSize="40" HorizontalOptions="Center" TextColor="WhiteSmoke"/>
+        <Border Stroke="purple" StrokeShape="RoundRectangle 25" StrokeThickness="3" Padding="30" BackgroundColor="Black" MinimumHeightRequest="450">
+            <Grid RowSpacing="30">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Border BackgroundColor="Transparent" StrokeShape="RoundRectangle 60" MinimumWidthRequest="225"
+                            Stroke="DimGray" >
+                    <Entry BackgroundColor="Transparent" FontSize="25" Keyboard="Text"  Placeholder="Add Title"
+                               PlaceholderColor="DimGray" TextColor="White" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                </Border>
+                <Border Grid.Row="1" BackgroundColor="Transparent" Padding="15" StrokeThickness="1" StrokeShape="RoundRectangle 20" Stroke="dimgray">
+                    <Editor FontSize="Small" Placeholder="Provide some details" PlaceholderColor="DimGrey" WidthRequest="200" TextColor="White"/>
+                </Border>
+                <VerticalStackLayout Grid.Row="2">
+                    <Label Text="Set time" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" TextColor="Grey"/>
+                    <HorizontalStackLayout Grid.Row="2" HorizontalOptions="Center" Spacing="10">
+                        <DatePicker FontSize="20" TextColor="Grey" Date="1/1/2023" VerticalOptions="Center"></DatePicker>
+                        <TimePicker FontSize="20" TextColor="Grey" Time="00:00" VerticalOptions="Center"></TimePicker>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Grid>
+        </Border>
+        <Button BackgroundColor="purple" Text="Add" CornerRadius="20" FontSize="Medium"/>
     </VerticalStackLayout>
 </ContentPage>
