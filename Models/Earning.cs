@@ -8,11 +8,13 @@ namespace PersonalManager.Models
 {
     public enum EarningsCategory
     {
-        Work, GiftsDonations, Investments, RentalIncome, PersonalLoans, Other
+        Work, Gifts, Investments, RentalIncome, PersonalLoans, Other
     }
     public class Earning
     {
-        public float Amount { get; set; }
+        public double Amount { get; set; }
+        public string AmountString => $"+{Amount}$";
+
         public EarningsCategory EarningCategory { get; set; }
         public string Details { get; set; }
     }

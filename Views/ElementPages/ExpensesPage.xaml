@@ -2,11 +2,40 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PersonalManager.Views.ElementPages.ExpensesPage"
-             Title="ExpensesPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
+             Title=""
+             Padding="10"
+             BackgroundColor="Black">
+    <ScrollView>
+        <VerticalStackLayout Padding="5" Spacing="10">
+            <Label 
+            Text="All Expenses"
+            FontSize="30" TextColor="#0062F0"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-    </VerticalStackLayout>
+            <Border Stroke="#0062F0" StrokeShape="RoundRectangle 25" Padding="20" StrokeThickness="3" BackgroundColor="Transparent">
+                <ListView x:Name="ExpensesListView" RowHeight="100">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="2*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding AmountString}" FontSize="30" VerticalOptions="Center" TextColor="Red"/>
+                                    <Label Text="{Binding ExpenseCategory}" FontSize="20" Grid.Column="1" TextColor="Gray" HorizontalTextAlignment="End" VerticalOptions="Center"/>
+                                    <Label Text="{Binding Details}" Grid.Row="1" Grid.ColumnSpan="2" TextColor="Grey"/>
+                                    <Line Grid.ColumnSpan="2" Grid.Row="1" HeightRequest="1" BackgroundColor="DimGray" VerticalOptions="End"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

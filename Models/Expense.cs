@@ -13,7 +13,8 @@ namespace PersonalManager.Models
     }
     public class Expense
     {
-        public float Amount { get; set; }
+        public double Amount { get; set; }
+        public string AmountString => $"-{Amount}$";
         public ExpensesCategory ExpenseCategory { get; set; }
         public string Details { get; set; }
     }

@@ -18,9 +18,9 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <HorizontalStackLayout Spacing="10">
-                    <Label Text="+" TextColor="DimGray" FontSize="50"
+                    <Label Text="+" TextColor="DimGray" FontSize="40"
                        VerticalOptions="Center" HorizontalOptions="Center"/>
-                    <Border BackgroundColor="Transparent" StrokeShape="RoundRectangle 60" MinimumWidthRequest="225"
+                    <Border BackgroundColor="Transparent" StrokeShape="RoundRectangle 60" MinimumWidthRequest="225" HeightRequest="60"
                             Stroke="DimGray" >
                         <Entry BackgroundColor="Transparent" FontSize="20" Keyboard="Numeric"
                                PlaceholderColor="DimGray" TextColor="White" VerticalOptions="Center" HorizontalTextAlignment="Center"/>

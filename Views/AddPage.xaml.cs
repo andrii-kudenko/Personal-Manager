@@ -10,23 +10,23 @@ public partial class AddPage : ContentPage
 		InitializeComponent();
 	}
 
-    private void ExpenseButton_Clicked(object sender, EventArgs e)
+    private async void ExpenseButton_Clicked(object sender, EventArgs e)
     {
-        Navigation.PushModalAsync(new AddExpensePage());
+       await Navigation.PushModalAsync(new AddExpensePage());
     }
 
-    private void EarningButton_Clicked(object sender, EventArgs e)
+    private async void EarningButton_Clicked(object sender, EventArgs e)
     {
-        Navigation.PushModalAsync(new AddEarningPage());
+        await Navigation.PushModalAsync(new AddEarningPage());
     }
 
-    private void NoteButton_Clicked(object sender, EventArgs e)
+    private async void NoteButton_Clicked(object sender, EventArgs e)
     {
-        Navigation.PushModalAsync(new AddNotePage());
+        await Navigation.PushModalAsync(new AddNotePage());
     }
 
-    private void ReminderButton_Clicked(object sender, EventArgs e)
+    private async void ReminderButton_Clicked(object sender, EventArgs e)
     {
-        Navigation.PushModalAsync(new AddReminderPage());
+        await Navigation.PushModalAsync(new AddReminderPage());
     }
 }

@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PersonalManager.Views.DashboardPage"
-             Title="DashboardPage"
+             Title="Dashboard"
              BackgroundColor="Black"
              Padding="10">
     <Grid RowSpacing="10">
@@ -17,8 +17,8 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         <VerticalStackLayout Grid.Column="1" Spacing="10">
-        <Label Text="Finance" HorizontalTextAlignment="Center" TextColor="Blue" FontSize="30"/>
-        <Border Stroke="blue" HeightRequest="200" StrokeShape="RoundRectangle 35" StrokeThickness="3" Padding="10" BackgroundColor="Black">
+            <Label Text="Finance" HorizontalTextAlignment="Center" TextColor="#0062F0" FontSize="30"/>
+            <Border Stroke="#0062F0" HeightRequest="200" StrokeShape="RoundRectangle 35" StrokeThickness="3" Padding="10" BackgroundColor="Black">
             <Grid ColumnSpacing="10">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -30,18 +30,21 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Label Text="+28031.2" FontSize="30"  TextColor="Green" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
-                    <Label Text="+28031.2" FontSize="30" TextColor="Red" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1"/>
+                <Label Text="+28031.2" FontSize="27"  TextColor="Green" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                    <Label Text="+2801.2" FontSize="27" TextColor="Red" HorizontalOptions="Center" VerticalOptions="Center" 
+                           FontAttributes="Bold" Grid.Column="1"/>
                 <Line Grid.Row="1" BackgroundColor="DimGrey" Grid.ColumnSpan="2" VerticalOptions="Start" HeightRequest="1"/>
-                <Label Text="+280" FontSize="30"  TextColor="Green" Grid.Row="1" Grid.ColumnSpan="2"
+                <Label Text="+280" FontSize="27"  TextColor="Green" Grid.Row="1" Grid.ColumnSpan="2"
                        HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                    <Button x:Name="EarningsButton" BackgroundColor="Transparent" CornerRadius="30" Clicked="EarningsButton_Clicked"></Button>
+                    <Button x:Name="ExpensesButton" BackgroundColor="Transparent" CornerRadius="30" Grid.Column="1" Clicked="ExpensesButton_Clicked"></Button>
                 </Grid>
         </Border>
         </VerticalStackLayout>
 
         <VerticalStackLayout Grid.Column="1" Grid.Row="1" Spacing="10" IsVisible="false">
-            <Label Text="Reminder" HorizontalTextAlignment="Center" TextColor="Blue" FontSize="30"/>
-            <Border Stroke="blue" HeightRequest="130" StrokeShape="RoundRectangle 35" StrokeThickness="3" Padding="15" BackgroundColor="Black">
+            <Label Text="Reminder" HorizontalTextAlignment="Center" TextColor="#0062F0" FontSize="30"/>
+            <Border Stroke="#0062F0" HeightRequest="130" StrokeShape="RoundRectangle 35" StrokeThickness="3" Padding="15" BackgroundColor="Black">
                 <Grid ColumnSpacing="10">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
@@ -65,8 +68,8 @@
             </Border>
         </VerticalStackLayout>
         <VerticalStackLayout Grid.Column="1" Grid.Row="1" Spacing="10">
-            <Label Text="Reminder" HorizontalTextAlignment="Center" TextColor="Blue" FontSize="30"/>
-            <Border Stroke="blue" HeightRequest="130" StrokeShape="RoundRectangle 35" StrokeThickness="3" Padding="15" BackgroundColor="Black">
+            <Label Text="Reminder" HorizontalTextAlignment="Center" TextColor="#0062F0" FontSize="30"/>
+            <Border Stroke="#0062F0" HeightRequest="130" StrokeShape="RoundRectangle 35" StrokeThickness="3" Padding="15" BackgroundColor="Black">
                 <Label Text="No reminders yet" FontSize="25" TextColor="DimGray" HorizontalOptions="Center"
                            VerticalOptions="Center" FontAttributes="Bold"/>
             </Border>
@@ -76,8 +79,8 @@
                 VerticalOptions="Start" HorizontalOptions="End"/>
 
         <VerticalStackLayout Grid.Column="1" Grid.Row="2" Spacing="10" VerticalOptions="Start" IsVisible="false">
-            <Label Text="Note" HorizontalTextAlignment="Center" TextColor="Blue" FontSize="30"/>
-            <Border Stroke="blue" HeightRequest="130" StrokeShape="RoundRectangle 35" StrokeThickness="3" Padding="20" BackgroundColor="Black">
+            <Label Text="Note" HorizontalTextAlignment="Center" TextColor="#0062F0" FontSize="30"/>
+            <Border Stroke="#0062F0" HeightRequest="130" StrokeShape="RoundRectangle 35" StrokeThickness="3" Padding="20" BackgroundColor="Black">
                 <Grid ColumnSpacing="10">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1.3*"/>
@@ -97,8 +100,8 @@
             </Border>
         </VerticalStackLayout>
         <VerticalStackLayout Grid.Column="1" Grid.Row="2" Spacing="10" VerticalOptions="Start" IsVisible="true">
-            <Label Text="Note" HorizontalTextAlignment="Center" TextColor="Blue" FontSize="30"/>
-            <Border Stroke="blue" HeightRequest="130" StrokeShape="RoundRectangle 35" StrokeThickness="3" Padding="15" BackgroundColor="Black">
+            <Label Text="Note" HorizontalTextAlignment="Center" TextColor="#0062F0" FontSize="30"/>
+            <Border Stroke="#0062F0" HeightRequest="130" StrokeShape="RoundRectangle 35" StrokeThickness="3" Padding="15" BackgroundColor="Black">
                 <Label Text="No notes yet" FontSize="25" TextColor="DimGray" HorizontalOptions="Center"
                            VerticalOptions="Center" FontAttributes="Bold"/>
             </Border>
