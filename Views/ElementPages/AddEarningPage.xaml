@@ -17,7 +17,14 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <HorizontalStackLayout Spacing="10">
+                <Label x:Name="PlusLabel" Text="  +" TextColor="DimGray" FontSize="38"
+                       VerticalOptions="Center" HorizontalOptions="Start"/>
+                <Border BackgroundColor="Transparent" StrokeShape="RoundRectangle 60" MinimumWidthRequest="225" HeightRequest="60"
+                            Stroke="DimGray" >
+                    <Entry x:Name="AmountEntry" BackgroundColor="Transparent" FontSize="20" Keyboard="Numeric" TextChanged="AmountEntry_TextChanged"
+                               PlaceholderColor="DimGray" TextColor="White" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                </Border>
+                <!--<HorizontalStackLayout Spacing="10">
                     <Label Text="+" TextColor="DimGray" FontSize="40"
                        VerticalOptions="Center" HorizontalOptions="Center"/>
                     <Border BackgroundColor="Transparent" StrokeShape="RoundRectangle 60" MinimumWidthRequest="225" HeightRequest="60"
@@ -25,7 +32,7 @@
                         <Entry BackgroundColor="Transparent" FontSize="20" Keyboard="Numeric"
                                PlaceholderColor="DimGray" TextColor="White" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
                     </Border>
-                </HorizontalStackLayout>
+                </HorizontalStackLayout>-->
                 <VerticalStackLayout Grid.Row="1" Spacing="10">
                     <Label Text="Choose Category" TextColor="DimGray" HorizontalOptions="Center" FontSize="Large"
                        VerticalOptions="Center"/>
