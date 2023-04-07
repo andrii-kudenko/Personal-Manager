@@ -5,9 +5,16 @@
              Title="Add Expense"
              BackgroundColor="Black"
              Padding="30">
+    <ContentPage.Resources>
+        <LinearGradientBrush x:Key="GradientBrush" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#0062F0" Offset="0"/>
+            <GradientStop Color="DarkRed" Offset="3"/>
+        </LinearGradientBrush>
+    </ContentPage.Resources>
     <VerticalStackLayout Spacing="20">
-        <Label Text="Add Expense" FontSize="40" HorizontalOptions="Center" TextColor="WhiteSmoke"/>
-        <Border Stroke="Darkred" StrokeShape="RoundRectangle 25" StrokeThickness="3" Padding="30" BackgroundColor="Black" MinimumHeightRequest="450">
+        <Label Text="Add Expense" FontSize="40" HorizontalOptions="Center" TextColor="#0062F0"/>
+        <Border Stroke="{StaticResource GradientBrush}" StrokeShape="RoundRectangle 25" StrokeThickness="3" Padding="30" 
+                BackgroundColor="Black" MinimumHeightRequest="450">
             <Grid RowSpacing="30">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>

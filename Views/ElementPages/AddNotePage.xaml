@@ -6,7 +6,7 @@
              BackgroundColor="Black"
              Padding="30">
     <VerticalStackLayout Spacing="20">
-        <Label Text="Add Note" FontSize="40" HorizontalOptions="Center" TextColor="WhiteSmoke"/>
+        <Label Text="Add Note" FontSize="40" HorizontalOptions="Center" TextColor="#0062F0"/>
         <Border Stroke="orange" StrokeShape="RoundRectangle 25" StrokeThickness="3" Padding="30" BackgroundColor="Black" MinimumHeightRequest="450">
             <Grid RowSpacing="30">
                 <Grid.RowDefinitions>

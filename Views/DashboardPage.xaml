@@ -74,8 +74,8 @@
                            VerticalOptions="Center" FontAttributes="Bold"/>
             </Border>
         </VerticalStackLayout>
-        <Button Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Text="View all>" TextColor="DimGrey"
-                BackgroundColor="Transparent" HeightRequest="50" WidthRequest="90" 
+        <Button x:Name="RemindersButton" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Text="View all>" TextColor="DimGrey"
+                BackgroundColor="Transparent" HeightRequest="50" WidthRequest="90" Clicked="RemindersButton_Clicked"
                 VerticalOptions="Start" HorizontalOptions="End"/>
 
         <VerticalStackLayout Grid.Column="1" Grid.Row="2" Spacing="10" VerticalOptions="Start" IsVisible="false">
@@ -106,8 +106,8 @@
                            VerticalOptions="Center" FontAttributes="Bold"/>
             </Border>
         </VerticalStackLayout>
-        <Button Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Text="View all>" TextColor="DimGrey"
-                BackgroundColor="Transparent" HeightRequest="50" WidthRequest="90" 
+        <Button x:Name="NotesButton" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Text="View all>" TextColor="DimGrey"
+                BackgroundColor="Transparent" HeightRequest="50" WidthRequest="90" Clicked="NotesButton_Clicked"
                 VerticalOptions="Start" HorizontalOptions="End"/>
     </Grid>
 

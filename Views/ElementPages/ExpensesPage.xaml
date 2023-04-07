@@ -5,6 +5,12 @@
              Title="Expenses"
              Padding="10"
              BackgroundColor="Black">
+    <ContentPage.Resources>
+        <LinearGradientBrush x:Key="GradientBrush" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="Red" Offset="0"/>
+            <GradientStop Color="Blue" Offset="3"/>
+        </LinearGradientBrush>
+    </ContentPage.Resources>
     <ScrollView>
         <VerticalStackLayout Padding="5" Spacing="10">
             <Label 
@@ -12,7 +18,7 @@
             FontSize="30" TextColor="#0062F0"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-            <Border Stroke="#0062F0" StrokeShape="RoundRectangle 25" Padding="20" StrokeThickness="3" BackgroundColor="Transparent">
+            <Border Stroke="{StaticResource GradientBrush}" StrokeShape="RoundRectangle 25" Padding="20" StrokeThickness="3" BackgroundColor="Transparent">
                 <ListView x:Name="ExpensesListView" RowHeight="100">
                     <ListView.ItemTemplate>
                         <DataTemplate>

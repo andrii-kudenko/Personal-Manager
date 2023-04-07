@@ -18,4 +18,14 @@ public partial class DashboardPage : ContentPage
     {
         Navigation.PushAsync(new ExpensesPage()); 
     }
+
+    private void RemindersButton_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new RemindersPage());
+    }
+
+    private void NotesButton_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new NotesPage());
+    }
 }
