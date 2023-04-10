@@ -17,11 +17,11 @@ namespace PersonalManager.Models
         private static void PopulateList()
         {
             _reminders.Add(new Reminder {Title = "Make homeworkkkkkkkkkkkkkkkkkkkkk", //30 symbols => 27 allowed
-                Text = "1. Make a c# assignment\n2. Make math Assignment", Date = new DateTime(2023, 4, 15)});
+                Text = "1. Make a c# assignment\n2. Make math Assignment", Date = new DateTime(2023, 4, 16, 6, 50, 00)});
             _reminders.Add(new Reminder {
-                Title = "Make ho", //30 symbols => 27 allowed
-                Text = "1. Make a c# assignment\n2. Make math Assignment",
-                Date = new DateTime(2023, 4, 15)
+                Title = "Make ho", //54 symbols => 51 allowed
+                Text = "1.Make a c# assignmentMake a c# assignmentMake a c# acawhfbafh",
+                Date = new DateTime(2023, 5, 15)
             });
         }
 
