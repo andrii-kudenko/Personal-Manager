@@ -54,6 +54,8 @@
 	  <None Remove="Resources\Images\finance.png" />
 	  <None Remove="Resources\Images\plus.png" />
 	  <None Remove="Resources\Images\user.png" />
+	  <None Remove="Class\" />
+	  <None Remove="Profile\" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -102,4 +104,8 @@
 	  </MauiXaml>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Class\" />
+	  <Folder Include="Profile\" />
+	</ItemGroup>
 </Project>

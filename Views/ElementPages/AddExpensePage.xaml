@@ -4,11 +4,11 @@
              x:Class="PersonalManager.Views.ElementPages.AddExpensePage"
              Title="Add Expense"
              BackgroundColor="Black"
-             Padding="30">
+             Padding="25">
     <ContentPage.Resources>
         <LinearGradientBrush x:Key="GradientBrush" StartPoint="0,0" EndPoint="1,1">
             <GradientStop Color="#0062F0" Offset="0"/>
-            <GradientStop Color="DarkRed" Offset="3"/>
+            <GradientStop Color="DarkRed" Offset="1"/>
         </LinearGradientBrush>
     </ContentPage.Resources>
     <VerticalStackLayout Spacing="20">
@@ -26,9 +26,9 @@
                 </Grid.ColumnDefinitions>
                     <Label x:Name="PlusLabel" Text="  -" TextColor="DimGray" FontSize="47"
                        VerticalOptions="Start" HorizontalOptions="Start"/>
-                    <Border BackgroundColor="Transparent" StrokeShape="RoundRectangle 60" MinimumWidthRequest="225" HeightRequest="60"
+                    <Border BackgroundColor="Transparent" StrokeShape="RoundRectangle 60" MinimumWidthRequest="230" HeightRequest="60"
                             Stroke="DimGray" >
-                        <Entry x:Name="AmountEntry" BackgroundColor="Transparent" FontSize="20" Keyboard="Numeric" TextChanged="AmountEntry_TextChanged"
+                        <Entry x:Name="AmountEntry" BackgroundColor="Transparent" FontSize="25" Keyboard="Numeric" TextChanged="AmountEntry_TextChanged"
                                PlaceholderColor="DimGray" TextColor="White" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
                     </Border>
                 <!--<HorizontalStackLayout Spacing="10">

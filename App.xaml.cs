@@ -1,11 +1,13 @@
-﻿namespace PersonalManager;
+﻿using PersonalManager.Views;
+
+namespace PersonalManager;
 
 public partial class App : Application
 {
 	public App()
 	{
-		InitializeComponent();
+		
 
-		MainPage = new AppShell();
+		MainPage = new NavigationPage (new StarterPage());
 	}
 }
