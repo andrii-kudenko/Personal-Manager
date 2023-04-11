@@ -4,7 +4,6 @@
              x:Class="PersonalManager.Views.ProfilePage"
              Title="ProfilePage"
              >
-
     <VerticalStackLayout>
         <ListView x:Name="functionsListView"/>
     </VerticalStackLayout>

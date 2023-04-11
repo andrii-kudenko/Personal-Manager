@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PersonalManager.User.Profile"
+             Title="Profile">
+
+
+    <!--<StackLayout Spacing="10">
+        <Label x:Name="nameLabel" Text="Name: John Doe" />
+        <Label x:Name="emailLabel" Text="Email: john.doe@example.com" />
+        <Label x:Name="mailingAddressLabel" Text="Mailing Address: 123 Main St" />
+        <Label x:Name="phoneNumberLabel" Text="Phone Number: (123) 456-7890" />
+
+        <StackLayout Orientation="Horizontal">
+            <Switch x:Name="Click ME"  />
+        </StackLayout>
+
+        <Picker x:Name="displayPicker" Title="Display">
+            <Picker.Items>
+                <x:String>Black</x:String>
+                <x:String>White</x:String>
+                <x:String>Red</x:String>
+            </Picker.Items>
+        </Picker>
+    </StackLayout>-->
+</ContentPage>

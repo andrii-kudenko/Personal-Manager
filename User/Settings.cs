@@ -1,5 +1,6 @@
 ﻿using System;
-namespace PersonalManager.Class
+using PersonalManager.Views;
+namespace PersonalManager.User
 {
 	public class Settings
 	{

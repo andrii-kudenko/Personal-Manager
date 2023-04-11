@@ -1,5 +1,5 @@
 ﻿using System;
-namespace PersonalManager.Class
+namespace PersonalManager.User
 {
 	public class Scanner
 	{

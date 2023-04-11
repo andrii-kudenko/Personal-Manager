@@ -1,9 +1,8 @@
 //Parth Manchanda 
 //Student ID - 991619566
-
-using Finance_Manager;
-using PersonalManager;
-using PersonalManager.Models;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using PersonalManager.User;
 
 namespace PersonalManager.Views
 {
@@ -42,15 +41,15 @@ namespace PersonalManager.Views
             switch (functionName)
             {
                 case "UserProfile":
-                    await Navigation.PushAsync(new UserProfile());
+                    await Navigation.PushAsync(new Profile());
                     break;
-                //case "Settings":
+                //case "QR code ":
                 //    await Navigation.PushAsync(new Scanner());
                 //    break;
-                //case "QR code":
+                //case "Settings":
                 //    await Navigation.PushAsync(new Settings());
                 //    break;
-                    // Add cases for the other functions here
+
             }
         }
     }

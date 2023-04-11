@@ -30,6 +30,25 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
+	  <CreatePackage>false</CreatePackage>
+	  <DeviceSpecificBuild>true</DeviceSpecificBuild>
+	  <_BundlerDebug>true</_BundlerDebug>
+	  <MtouchVerbosity>2</MtouchVerbosity>
+	  <MtouchInterpreter>all</MtouchInterpreter>
+	  <MtouchLink>None</MtouchLink>
+	  <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-android|AnyCPU'">
+	  <AndroidLinkMode>None</AndroidLinkMode>
+	  <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidMessageHandler</AndroidHttpClientHandlerType>
+	  <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+	  <AndroidPackageFormat>apk</AndroidPackageFormat>
+	  <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
+	  <AndroidUseAapt2>true</AndroidUseAapt2>
+	  <AndroidManifest>AndroidManifest.xml</AndroidManifest>
+	  <AndroidDexTool>d8</AndroidDexTool>
+	</PropertyGroup>
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
@@ -55,7 +74,6 @@
 	  <None Remove="Resources\Images\plus.png" />
 	  <None Remove="Resources\Images\user.png" />
 	  <None Remove="Class\" />
-	  <None Remove="Profile\" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -106,6 +124,5 @@
 
 	<ItemGroup>
 	  <Folder Include="Class\" />
-	  <Folder Include="Profile\" />
 	</ItemGroup>
 </Project>

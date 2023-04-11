@@ -1,8 +1,7 @@
-using Android.Views.Animations;
-using Android.Widget;
+
 using Microsoft.Maui.Controls;
 using PersonalManager.Models;
-using static Android.Icu.Text.CaseMap;
+
 
 namespace PersonalManager.Views.ElementPages;
 
