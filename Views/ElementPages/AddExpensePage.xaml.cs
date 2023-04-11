@@ -1,3 +1,9 @@
+using Android.Views.Animations;
+using Android.Widget;
+using Microsoft.Maui.Controls;
+using PersonalManager.Models;
+using static Android.Icu.Text.CaseMap;
+
 namespace PersonalManager.Views.ElementPages;
 
 public partial class AddExpensePage : ContentPage
@@ -20,6 +26,32 @@ public partial class AddExpensePage : ContentPage
             // The Entry control contains text
             PlusLabel.TextColor = Colors.Red;
         }
+    }
+    private void AddButton_Clicked(object sender, EventArgs e)
+    {
 
+        double amount = double.Parse(AmountEntry.Text);
+        //Housing, Transportation, Food, HealthFitness, PersonalCare, Education, DebtPayments, Insuarance, GiftsDonations, Other
+        string item = (string)CategoryPicker.SelectedItem;
+        ExpensesCategory category;
+        switch (item)
+        {
+            case "Food": category = ExpensesCategory.Food; break;
+            case "Transportation": category = ExpensesCategory.Transportation; break;
+            case "Personal Care": category = ExpensesCategory.PersonalCare; break;
+            case "Housing": category = ExpensesCategory.Housing; break;
+            case "Healthcare/Fitness": category = ExpensesCategory.HealthFitness; break;
+            case "Education": category = ExpensesCategory.Education; break;
+            case "Debt Payments": category = ExpensesCategory.DebtPayments; break;
+            case "Insuarance": category = ExpensesCategory.Insuarance; break;
+            case "Gifts/Donations": category = ExpensesCategory.GiftsDonations; break;
+            case "Other": category = ExpensesCategory.Other; break;
+            default: category = ExpensesCategory.Other; break;
+        }
+        string details = DetailsEditor.Text;
+        Expense expense = new Expense {Amount = amount, ExpenseCategory = category, Details = details};
+        ExpensesRepository.AddExpense(expense);
+        Navigation.PopModalAsync();
+        //Navigation.PopToRootAsync();
     }
 }

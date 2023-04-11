@@ -19,7 +19,12 @@
         <VerticalStackLayout Grid.Column="1" Spacing="10">
             <Label Text="Finance" HorizontalTextAlignment="Center" TextColor="#0062F0" FontSize="30"/>
             <Border Stroke="#0062F0" HeightRequest="200" StrokeShape="RoundRectangle 35" StrokeThickness="3" Padding="10" BackgroundColor="Black">
-            <Grid ColumnSpacing="10">
+                <Border.Shadow>
+                    <Shadow Brush="DarkBlue"
+                             Opacity=".6" 
+                            Offset="0,15"/>
+                </Border.Shadow>
+                <Grid ColumnSpacing="10">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
@@ -31,7 +36,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Label Text="+28031.2" FontSize="27"  TextColor="Green" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
-                    <Label Text="+2801.2" FontSize="27" TextColor="Red" HorizontalOptions="Center" VerticalOptions="Center" 
+                    <Label Text="-2801.2" FontSize="27" TextColor="Red" HorizontalOptions="Center" VerticalOptions="Center" 
                            FontAttributes="Bold" Grid.Column="1"/>
                 <Line Grid.Row="1" BackgroundColor="DimGrey" Grid.ColumnSpan="2" VerticalOptions="Start" HeightRequest="1"/>
                 <Label Text="+280" FontSize="27"  TextColor="Green" Grid.Row="1" Grid.ColumnSpan="2"

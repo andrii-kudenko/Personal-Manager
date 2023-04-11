@@ -57,15 +57,17 @@
                                 <x:String>Education</x:String>
                                 <x:String>Debt Payments</x:String>
                                 <x:String>Insuarance</x:String>
+                                <x:String>Gifts/Donations</x:String>
+                                <x:String>Other</x:String>
                             </Picker.Items>
                         </Picker>
                     </Border>
                 </VerticalStackLayout>
                 <Border Grid.Row="2" BackgroundColor="Transparent" Padding="15" StrokeThickness="1" StrokeShape="RoundRectangle 20" Stroke="dimgray">
-                    <Editor FontSize="Small" Placeholder="Provide some details" PlaceholderColor="DimGrey" WidthRequest="200" TextColor="White"/>
+                    <Editor x:Name="DetailsEditor" FontSize="Small" Placeholder="Provide some details" PlaceholderColor="DimGrey" WidthRequest="200" TextColor="White"/>
                 </Border>
             </Grid>
         </Border>
-        <Button BackgroundColor="Darkred" Text="Add" CornerRadius="20" FontSize="Medium"/>
+        <Button x:Name="AddButton" BackgroundColor="Darkred" Text="Add" CornerRadius="20" FontSize="Medium" Clicked="AddButton_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>
