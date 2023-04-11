@@ -47,12 +47,16 @@
                             StrokeShape="RoundRectangle 60" MinimumWidthRequest="225">
                         <Picker x:Name="CategoryPicker" HorizontalTextAlignment="Center" VerticalOptions="Center"
                          TextColor="White" FontSize="20">
+        <!--Housing, Transportation, Food, HealthFitness, PersonalCare, Education, DebtPayments, Insuarance, GiftsDonations, Other-->
                             <Picker.Items>
-                                <x:String>FAST</x:String>
-                                <x:String>FAAD</x:String>
-                                <x:String>FAHAS</x:String>
-                                <x:String>FAHCS</x:String>
-                                <x:String>PSB</x:String>
+                                <x:String>Food</x:String>
+                                <x:String>Transportation</x:String>
+                                <x:String>Personal Care</x:String>
+                                <x:String>Housing</x:String>
+                                <x:String>Healthcare/Fitness</x:String>
+                                <x:String>Education</x:String>
+                                <x:String>Debt Payments</x:String>
+                                <x:String>Insuarance</x:String>
                             </Picker.Items>
                         </Picker>
                     </Border>
