@@ -4,7 +4,8 @@
              x:Class="PersonalManager.Views.ElementPages.ExpensesPage"
              Title="Expenses"
              Padding="10"
-             BackgroundColor="Black">
+             BackgroundColor="Black"
+             Appearing="ContentPage_Appearing">
     <ContentPage.Resources>
         <LinearGradientBrush x:Key="GradientBrush" StartPoint="0,0" EndPoint="1,1">
             <GradientStop Color="Red" Offset="0"/>

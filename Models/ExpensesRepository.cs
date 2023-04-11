@@ -28,5 +28,10 @@ namespace PersonalManager.Models
             return _expenses;
         }
 
+        public static void AddExpense(Expense expense)
+        {
+            _expenses.Add(expense);
+        }
+
     }
 }
