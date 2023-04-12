@@ -1,7 +1,6 @@
 //Parth Manchanda 
 //Student ID - 991619566
-using Microsoft.Maui.Controls;
-using Microsoft.Maui.Graphics;
+
 using PersonalManager.User;
 
 namespace PersonalManager.Views

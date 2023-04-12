@@ -1,5 +1,5 @@
 ﻿using PersonalManager.Views;
-using static Android.Resource;
+
 
 namespace PersonalManager.Views;
 
@@ -15,7 +15,6 @@ public partial class StarterPage : ContentPage
 
     public StarterPage()
     {
-
         InitializeComponent();
         Name = "John Doe";
         Email = "johndoe@example.com";

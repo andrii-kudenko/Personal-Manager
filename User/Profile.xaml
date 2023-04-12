@@ -1,26 +1,163 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:shapes="clr-namespace:Microsoft.Maui.Controls.Shapes;assembly=Microsoft.Maui.Controls"
              x:Class="PersonalManager.User.Profile"
-             Title="Profile">
+             NavigationPage.HasNavigationBar="False">
+             
+             
+
+    <ContentPage.Resources>
+        <LinearGradientBrush x:Key="PageBackground" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#182D5C" Offset="0" />
+            <GradientStop Color="#0D1F2D" Offset="0.34"/>
+            <GradientStop Color="#75B8FF" Offset="0.51"/>
+            <GradientStop Color="#082C92" Offset="0.68"/>
+            <GradientStop Color="#0D1F2D" Offset="0.95"/>
+            <GradientStop Color="#0D1F2D" Offset="1"/>
+            
+        </LinearGradientBrush>
+    </ContentPage.Resources>
+
+     <Grid Background="{StaticResource PageBackground}">
+         <AbsoluteLayout>
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                 <Frame Grid.Row="0"
+                       BorderColor="#75B8FF"
+                       CornerRadius="40"
+                       HasShadow="True"
+                       Margin="0,0,0,10"
+                       Padding="10"
+                       VerticalOptions="Start"
+                       IsClippedToBounds="True"
+                       BackgroundColor="#1C5F76"
+                       HeightRequest="200"
+                       TranslationY="-110">
+
+                    <StackLayout VerticalOptions="EndAndExpand" >
+
+                            <Frame Margin="0,130,200,30"
+                               Padding="0.001"
+                               CornerRadius="9"
+                               HasShadow="False"
+                               WidthRequest="150"
+                               BackgroundColor="#1C5F76">
+                        
+                                    <StackLayout>
+                                        <StackLayout VerticalOptions="End">
+
+                                        <Label
+                                            x:Name="NameEntry"
+                                           Margin="10,0,0,0"
+                                           VerticalOptions="End"
+                                           Grid.Row="2"
+                                           Text="Hi Aeiman !"
+                                           FontSize="Medium"
+                                           TextColor="Pink"/>
+
+                                          <Label
+                                               Margin="10,0,0,0"
+                                               VerticalOptions="End"
+                                               Grid.Row="2"
+                                               Text="Oakville, Ontario"
+                                               FontSize="Small"
+                                               TextColor="Pink"/>
+                                       </StackLayout>
+
+                                     </StackLayout>
+
+                            </Frame>
+                
+                
+                    </StackLayout>
+            
+                 </Frame>
 
 
-    <!--<StackLayout Spacing="10">
-        <Label x:Name="nameLabel" Text="Name: John Doe" />
-        <Label x:Name="emailLabel" Text="Email: john.doe@example.com" />
-        <Label x:Name="mailingAddressLabel" Text="Mailing Address: 123 Main St" />
-        <Label x:Name="phoneNumberLabel" Text="Phone Number: (123) 456-7890" />
+                <StackLayout Grid.Row="0"
+                             VerticalOptions="Start"
+                             Padding="100"
+                             Margin="0,50,0,0">
 
-        <StackLayout Orientation="Horizontal">
-            <Switch x:Name="Click ME"  />
-        </StackLayout>
+                    <Image
+                              Source="fun.jpeg"
+                              Aspect="AspectFill"
+                              Margin="0,0,0,10"
+                              Grid.Column="1"
+                              WidthRequest="200"
+                              HeightRequest="250"
+                              HorizontalOptions="End"
+                              VerticalOptions="Center">
+                          <Image.Clip>
+                              <shapes:EllipseGeometry Center="100, 110"
+                              RadiusX="100"
+                              RadiusY="110"/>
+                          </Image.Clip>
+                    </Image>
 
-        <Picker x:Name="displayPicker" Title="Display">
-            <Picker.Items>
-                <x:String>Black</x:String>
-                <x:String>White</x:String>
-                <x:String>Red</x:String>
-            </Picker.Items>
-        </Picker>
-    </StackLayout>-->
+                    <Entry Placeholder="Email"
+                           Text="aeiman.gadafi@sheridan.ca"
+                           FontSize="Small"
+                           Margin="0,5,0,0"
+                           IsEnabled="False"
+                           PlaceholderColor="#A4D4FF"
+                           TextColor="#A4D4FF"/>
+
+            
+
+                    <Entry Placeholder="Address"
+                           FontSize="Small"
+                           IsEnabled="False"
+                           Text="55 Fenell Avenue"
+                           Margin="0,5,0,0"
+                           PlaceholderColor="#A4D4FF"
+                           TextColor="#A4D4FF"/>
+                    <StackLayout Orientation="Horizontal">
+                            <Picker x:Name="CountryCodePicker"
+                                    TextColor="#F78745"
+                                    VerticalOptions="CenterAndExpand"
+                                    SelectedIndexChanged="CountryCodePicker_SelectedIndexChanged">
+                                <Picker.Items>
+                                    <x:String>+1</x:String>
+                                    <x:String>+86</x:String>
+                                    <x:String>+91</x:String>
+                                    <x:String>+32</x:String>
+                                    <x:String>+92</x:String>
+                                    <x:String>+99</x:String>
+                                    <x:String>+21</x:String>
+                                </Picker.Items>
+                            </Picker>
+                            <Entry Placeholder="Phone Number"
+                                   FontSize="Small"
+                                   Margin="0,5,0,0"
+                                   Text="403 871 8937"
+                                   IsEnabled="False"
+                                   PlaceholderColor="#A4D4FF"
+                                   TextColor="#A4D4FF"/>
+                        
+                        </StackLayout>
+                    <Label
+                        HorizontalOptions="End"
+                        Padding="20"
+                        VerticalOptions="End"
+                        TextColor="#A4D4FF"
+                            Text="Designed by Parth Manchanda"
+                            FontFamily="DancingScript"
+                            FontSize="Micro"/>
+                    
+                </StackLayout>
+                
+            </Grid>     
+            </AbsoluteLayout>
+         </Grid>
 </ContentPage>

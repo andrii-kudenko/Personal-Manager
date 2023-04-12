@@ -2,8 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PersonalManager.Views.StarterPage"
-             xmlns:shapes="clr-namespace:Microsoft.Maui.Controls.Shapes;assembly=Microsoft.Maui.Controls"
-             >
+             xmlns:shapes="clr-namespace:Microsoft.Maui.Controls.Shapes;assembly=Microsoft.Maui.Controls">
 
     <ContentPage.Resources>
         <LinearGradientBrush x:Key="PageBackground" StartPoint="0,0" EndPoint="1,1">
@@ -17,39 +16,39 @@
         </LinearGradientBrush>
     </ContentPage.Resources>
 
-    <Grid Background="{StaticResource PageBackground}">
+            <Grid Background="{StaticResource PageBackground}">
 
-        <AbsoluteLayout>
+                <AbsoluteLayout>
        
-                <Image Source="background.jpeg"
-                       Aspect="AspectFill"
-                       AbsoluteLayout.LayoutBounds="0, 0, 1.5, 2"
-                       AbsoluteLayout.LayoutFlags="All" />
-        </AbsoluteLayout>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+                        <Image Source="background.jpeg"
+                               Aspect="AspectFill"
+                               AbsoluteLayout.LayoutBounds="0, 0, 1.5, 2"
+                               AbsoluteLayout.LayoutFlags="All" />
+                </AbsoluteLayout>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
             
-        </Grid.RowDefinitions>
+                </Grid.RowDefinitions>
         
-        <StackLayout Grid.Row="1" VerticalOptions="Center" 
-             HeightRequest="5"
-             Margin="0,0,10,0"
-             HorizontalOptions="Start"
-             WidthRequest="150">
+                <StackLayout Grid.Row="1" VerticalOptions="Center" 
+                     HeightRequest="5"
+                     Margin="0,0,10,0"
+                     HorizontalOptions="Start"
+                     WidthRequest="150">
 
-                <Image Source="profile.jpeg" Aspect="AspectFill" WidthRequest="75" HeightRequest="75">
-                    <Image.Clip>
-                        <shapes:EllipseGeometry Center="30,30" RadiusX="30" RadiusY="30"/>
-                    </Image.Clip>
+                        <Image Source="profile.jpeg" Aspect="AspectFill" WidthRequest="75" HeightRequest="75">
+                            <Image.Clip>
+                                <shapes:EllipseGeometry Center="30,30" RadiusX="30" RadiusY="30"/>
+                            </Image.Clip>
 
-                </Image>
+                        </Image>
 
-        </StackLayout>
+                </StackLayout>
 
         <StackLayout Grid.Row="2" VerticalOptions="EndAndExpand" Padding="10">
 
@@ -170,24 +169,20 @@
                        PlaceholderColor="#A4D4FF"
                        Margin="0,5,0,0"/>
             </Frame>
-        </StackLayout>
+            </StackLayout>
    
-        <StackLayout Grid.Row="4" VerticalOptions="End" Padding="10">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
+               <StackLayout Grid.Row="4"
+                            VerticalOptions="End"
+                            Padding="10"
+                            HorizontalOptions="Center">
+                    <Button
+                        Text="Login"
+                        BackgroundColor="#75B8FF"
+                        CornerRadius="9"
+                        Margin="30"
+                        TextColor="#0D1F2D"
+                        Clicked="Button_Clicked"/>
+                </StackLayout>
 
-            <Button
-                    Text="Login"
-                    BackgroundColor="#75B8FF"
-                    CornerRadius="9"
-                    Margin="20"
-                    TextColor="#0D1F2D"
-                    Clicked="Button_Clicked"/>
-
-            </Grid>
-        </StackLayout>
     </Grid>
 </ContentPage>
