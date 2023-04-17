@@ -9,7 +9,12 @@ public partial class RemindersPage : ContentPage
     public RemindersPage()
     {
         InitializeComponent();
+    }
+
+    private void ContentPage_Appearing(object sender, EventArgs e)
+    {
         RemindersListView.ItemsSource = RemindersRepository.GetReminders();
+
     }
 
     //private void AnimatedBorder_Loaded(object sender, EventArgs e)

@@ -7,6 +7,11 @@ public partial class NotesPage : ContentPage
 	public NotesPage()
 	{
 		InitializeComponent();
-		NotesListView.ItemsSource = NotesRepository.GetNotes();
 	}
+
+    private void ContentPage_Appearing(object sender, EventArgs e)
+    {
+        NotesListView.ItemsSource = NotesRepository.GetNotes();
+
+    }
 }

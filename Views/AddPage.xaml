@@ -4,7 +4,8 @@
              x:Class="PersonalManager.Views.AddPage"
              Title="Add+"
              BackgroundColor="Black"
-             Padding="20">
+             Padding="20"
+             NavigationPage.HasNavigationBar="False">
     <VerticalStackLayout Spacing="15">
         <Border Stroke="#0062F0" StrokeShape="RoundRectangle 50" StrokeThickness="2" Padding="10" BackgroundColor="Black">
         <Grid>

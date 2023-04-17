@@ -9,7 +9,7 @@ namespace PersonalManager.Models
 
     public enum ExpensesCategory
     {
-        Housing, Transportation, Food, HealthFitness, PersonalCare, Education, DebtPayments, Insuarance, GiftsDonations, Other
+        Housing, Transportation, Electronics, Food, HealthFitness, PersonalCare, Education, DebtPayments, Insurance, GiftsDonations, Other
     }
     public class Expense
     {

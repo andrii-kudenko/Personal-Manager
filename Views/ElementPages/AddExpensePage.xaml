@@ -54,9 +54,10 @@
                                 <x:String>Personal Care</x:String>
                                 <x:String>Housing</x:String>
                                 <x:String>Healthcare/Fitness</x:String>
+                                <x:String>Electronics</x:String>
                                 <x:String>Education</x:String>
                                 <x:String>Debt Payments</x:String>
-                                <x:String>Insuarance</x:String>
+                                <x:String>Insurance</x:String>
                                 <x:String>Gifts/Donations</x:String>
                                 <x:String>Other</x:String>
                             </Picker.Items>

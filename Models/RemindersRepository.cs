@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PersonalManager.Views.ElementPages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,6 +29,11 @@ namespace PersonalManager.Models
         public static List<Reminder> GetReminders()
         {
             return _reminders;
+        }
+
+        public static void AddReminder(Reminder reminder)
+        {
+            _reminders.Add(reminder); 
         }
     }
 }

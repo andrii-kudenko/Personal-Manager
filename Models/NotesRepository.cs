@@ -26,5 +26,9 @@ namespace PersonalManager.Models
         {
             return _notes;
         }
+        public static void AddNote(Note note)
+        {
+            _notes.Add(note);
+        }
     }
 }

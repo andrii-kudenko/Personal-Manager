@@ -22,11 +22,16 @@
                 Route="DashboardPage" />
             </Tab>
             <Tab Title="Finance" Icon="finance.png">
-                <ShellContent
-                Title="Finance"
+            <ShellContent
+                Title="Income"
+                ContentTemplate="{DataTemplate local:FinancePage2}"
+                Route="FinancePage2" />
+            <ShellContent
+                Title="Expenses"
                 ContentTemplate="{DataTemplate local:FinancePage}"
                 Route="FinancePage" />
-            </Tab>
+                
+        </Tab>
             <Tab Title="Add" Icon="plus.png">
             <ShellContent
                 

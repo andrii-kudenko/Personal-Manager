@@ -4,7 +4,8 @@
              x:Class="PersonalManager.Views.ElementPages.NotesPage"
              Title="NotesPage"
              Padding="10"
-             BackgroundColor="black">
+             BackgroundColor="black"
+             Appearing="ContentPage_Appearing">
     <ContentPage.Resources>
         <LinearGradientBrush x:Key="GradientBrush" StartPoint="0,0" EndPoint="1,1">
             <GradientStop Color="Orange" Offset="0"/>
