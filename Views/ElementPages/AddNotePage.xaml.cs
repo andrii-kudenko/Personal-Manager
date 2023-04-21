@@ -31,7 +31,7 @@ public partial class AddNotePage : ContentPage
         }
         catch (Exception ex)
         {
-            DisplayAlert("warning", "fill out the fields", "ok");
+            DisplayAlert("Warning", "Please fill out the required fields", "Ok");
         }
     }
 }

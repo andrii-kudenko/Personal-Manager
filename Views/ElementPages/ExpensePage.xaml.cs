@@ -7,9 +7,9 @@ public partial class ExpensePage : ContentPage
 	public ExpensePage(Expense expense)
 	{
 		InitializeComponent();
-        AmountLabel.Text = expense.Amount.ToString();
-        CategoryLabel.Text = expense.ExpenseCategory.ToString();
-        TextLabel.Text = expense.Details.ToString();
+        AmountLabel.Text = "Amount: " + expense.Amount.ToString() + "$";
+        CategoryLabel.Text = "Category: " + expense.ExpenseCategory.ToString();
+        TextLabel.Text = "Details: " + expense.Details.ToString();
 	}
 
     private void Button_Clicked(object sender, EventArgs e)

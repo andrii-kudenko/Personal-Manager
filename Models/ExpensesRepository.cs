@@ -16,10 +16,10 @@ namespace PersonalManager.Models
         }
         private static void PopulateList()
         {
-            _expenses.Add(new Expense { Amount = 2150, ExpenseCategory = ExpensesCategory.Housing, Details = "Payment for April" });
-            _expenses.Add(new Expense { Amount = 126.56, ExpenseCategory = ExpensesCategory.Food, Details = "Walmart" });
-            _expenses.Add(new Expense { Amount = 1500, ExpenseCategory = ExpensesCategory.GiftsDonations, Details = "From Mom" });
-            _expenses.Add(new Expense { Amount = 3.5, ExpenseCategory = ExpensesCategory.Transportation, Details = "Bus" });
+            //_expenses.Add(new Expense { Amount = 2150, ExpenseCategory = ExpensesCategory.Housing, Details = "Payment for April" });
+            //_expenses.Add(new Expense { Amount = 126.56, ExpenseCategory = ExpensesCategory.Food, Details = "Walmart" });
+            //_expenses.Add(new Expense { Amount = 1500, ExpenseCategory = ExpensesCategory.GiftsDonations, Details = "From Mom" });
+            //_expenses.Add(new Expense { Amount = 3.5, ExpenseCategory = ExpensesCategory.Transportation, Details = "Bus" });
 
         }
         
@@ -61,6 +61,8 @@ namespace PersonalManager.Models
         public static List<ExpensePercentage> CalculatePercentage()
         {
             double total = GetTotal();
+            if (total == 0)
+                total = 1;
             double housing = 0;
             double transportation = 0;
             double electronics = 0;
