@@ -21,18 +21,27 @@ public partial class FinancePage : ContentPage
     private void ContentPage_Appearing(object sender, EventArgs e)
     {
 
-        var percentages = ExpensesRepository.CalculatePercentage();
-        Expense1Label.Text = percentages[0].Description;
-        Expense2Label.Text = percentages[1].Description;
-        Expense3Label.Text = percentages[2].Description;
-        Expense4Label.Text = percentages[3].Description;
-        Expense5Label.Text = percentages[4].Description;
-        Expense6Label.Text = percentages[5].Description;
-        Expense7Label.Text = percentages[6].Description;
-        Expense8Label.Text = percentages[7].Description;
-        Expense9Label.Text = percentages[8].Description;
-        Expense10Label.Text = percentages[9].Description;
-        Expense11Label.Text = percentages[10].Description;
+        var expensesPercentages = ExpensesRepository.CalculatePercentage();
+        Expense1Label.Text = expensesPercentages[0].Description;
+        Expense2Label.Text = expensesPercentages[1].Description;
+        Expense3Label.Text = expensesPercentages[2].Description;
+        Expense4Label.Text = expensesPercentages[3].Description;
+        Expense5Label.Text = expensesPercentages[4].Description;
+        Expense6Label.Text = expensesPercentages[5].Description;
+        Expense7Label.Text = expensesPercentages[6].Description;
+        Expense8Label.Text = expensesPercentages[7].Description;
+        Expense9Label.Text = expensesPercentages[8].Description;
+        Expense10Label.Text = expensesPercentages[9].Description;
+        Expense11Label.Text = expensesPercentages[10].Description;
+
+        var incomePercentages = EarningsRepository.CalculatePercentage();
+        Income1Label.Text = incomePercentages[0].Description;
+        Income2Label.Text = incomePercentages[1].Description;
+        Income3Label.Text = incomePercentages[2].Description;
+        Income4Label.Text = incomePercentages[3].Description;
+        Income5Label.Text = incomePercentages[4].Description;
+        Income6Label.Text = incomePercentages[5].Description;
+
 
         //TestLabel.Text = housing[10].Description;
         //Test2Label.Text = housing[9].Description;

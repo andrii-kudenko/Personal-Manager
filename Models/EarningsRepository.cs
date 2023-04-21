@@ -16,7 +16,7 @@ namespace PersonalManager.Models
         }
         private static void PopulateList()
         {
-            _earnings.Add(new Earning {Amount=124.12, EarningCategory=EarningsCategory.Work, Details="1st part of salary in April"});
+            _earnings.Add(new Earning { Amount = 124.12, EarningCategory = EarningsCategory.Work, Details = "1st part of salary in April" });
             _earnings.Add(new Earning { Amount = 500, EarningCategory = EarningsCategory.Gifts, Details = "Gift from my friend" });
             _earnings.Add(new Earning { Amount = 1250, EarningCategory = EarningsCategory.Investments, Details = "Apple stonks" });
             _earnings.Add(new Earning { Amount = 1250, EarningCategory = EarningsCategory.Investments, Details = "Apple stonks" });
@@ -38,7 +38,7 @@ namespace PersonalManager.Models
             _earnings.Insert(0, earning);
         }
 
-        private static double GetTotal()
+        public static double GetTotal()
         {
             double total = 0;
             foreach (var earning in _earnings)
@@ -46,6 +46,21 @@ namespace PersonalManager.Models
                 total += earning.Amount;
             }
             return total;
+        }
+
+        public static string GetLastEarning()
+        {
+            try
+            {
+
+
+                var last = _earnings[0].AmountString;
+
+                return last;
+            }
+            catch (Exception ex) {
+                return null;
+            }
         }
 
         public static List<EarningPercentage> CalculatePercentage()

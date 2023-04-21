@@ -45,7 +45,7 @@ public partial class AddExpensePage : ContentPage
             case "Transportation": category = ExpensesCategory.Transportation; break;
             case "Personal Care": category = ExpensesCategory.PersonalCare; break;
             case "Housing": category = ExpensesCategory.Housing; break;
-            case "Electronics": category = ExpensesCategory.Food; break;
+            case "Electronics": category = ExpensesCategory.Electronics; break;
             case "Healthcare/Fitness": category = ExpensesCategory.HealthFitness; break;
             case "Education": category = ExpensesCategory.Education; break;
             case "Debt Payments": category = ExpensesCategory.DebtPayments; break;
@@ -66,7 +66,7 @@ public partial class AddExpensePage : ContentPage
         }
         catch (Exception ex)
         {
-            DisplayAlert("cc","gg","ok");
+            DisplayAlert("Warning","Please fill out the required fields","Ok");
         }
     }
 }

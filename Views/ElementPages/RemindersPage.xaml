@@ -5,7 +5,8 @@
              Title="RemindersPage"
              Padding="10"
              BackgroundColor="Black"
-             Appearing="ContentPage_Appearing">
+             Appearing="ContentPage_Appearing"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Resources>
         <LinearGradientBrush x:Key="GradientBrush" StartPoint="0,0" EndPoint="1,1">
             <GradientStop Color="Purple" Offset="0"/>
@@ -20,10 +21,11 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
             <Border Stroke="{StaticResource GradientBrush}" StrokeShape="RoundRectangle 25" Padding="20" StrokeThickness="3" BackgroundColor="Transparent">
-                <ListView x:Name="RemindersListView" RowHeight="150">
+                <ListView x:Name="RemindersListView" RowHeight="150" ItemTapped="RemindersListView_ItemTapped">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
+                                
                                 <Grid>
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="2*"/>

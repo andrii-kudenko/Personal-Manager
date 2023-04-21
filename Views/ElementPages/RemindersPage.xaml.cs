@@ -14,28 +14,28 @@ public partial class RemindersPage : ContentPage
     private void ContentPage_Appearing(object sender, EventArgs e)
     {
         RemindersListView.ItemsSource = RemindersRepository.GetReminders();
-
+        RemindersListView.SelectedItem= null;
     }
 
-    //private void AnimatedBorder_Loaded(object sender, EventArgs e)
+    //private void RemindersListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
     //{
-    //    var stops = new GradientStopCollection
-    //    {
-    //        new GradientStop(Colors.Red, 0),
-    //        new GradientStop(Colors.Blue, 0.5f),
-    //        new GradientStop(Colors.Yellow, 1)
-    //    };
+    //    RemindersListView.SelectedItem.
+    //    //((Reminder)e.SelectedItem).
 
-    //    var brush = new LinearGradientBrush(stops, new Point(0, 0), new Point(1, 1));
-
-    //    var animation = new Animation(callback =>
-    //    {
-    //        brush.StartPoint = new Point(callback, 0);
-    //        brush.EndPoint = new Point(1 + callback, 1);
-    //    });
-    //    AnimatedBorder.Stroke = brush;
-
-
-    //    animation.Commit(this, "AnimatedBorder_Loaded", length: 3000, repeat: () => true);
+    //    ((ListView)sender).SelectedItem = null;
     //}
+
+    //private void RemindersListView_ItemTapped(object sender, ItemTappedEventArgs e)
+    //{
+
+    //}
+
+
+    private void RemindersListView_ItemTapped(object sender, ItemTappedEventArgs e)
+    {
+        
+        var reminder = (Reminder)RemindersListView.SelectedItem;
+        Navigation.PushModalAsync(new ReminderPage(reminder));
+    }
+
 }

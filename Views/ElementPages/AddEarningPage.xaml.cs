@@ -60,7 +60,7 @@ public partial class AddEarningPage : ContentPage
         }
         catch (Exception ex)
         {
-            DisplayAlert("cc", "gg", "ok");
+            DisplayAlert("Warning", "Please fill out the required fields", "Ok");
         }
     }
 }
