@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-    
+
  <Shell
     x:Class="PersonalManager.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:PersonalManager.Views"
     Shell.FlyoutBehavior="Disabled"
-    Shell.TabBarBackgroundColor="Black"    
+    Shell.TabBarBackgroundColor="Black"
     Shell.TabBarTitleColor="#0062F0"
     Shell.TabBarUnselectedColor="#A0A3A8"
     Shell.TitleColor="White"
@@ -21,28 +21,20 @@
                 ContentTemplate="{DataTemplate local:DashboardPage}"
                 Route="DashboardPage" />
             </Tab>
-            <Tab Title="Finance" Icon="finance.png">           
+            <Tab Title="Finance" Icon="finance.png">
             <ShellContent
                 Title="Expenses"
                 ContentTemplate="{DataTemplate local:FinancePage}"
                 Route="FinancePage" />
-                
+
         </Tab>
             <Tab Title="Add" Icon="plus.png">
             <ShellContent
-                
+
                 Title="Add"
                 ContentTemplate="{DataTemplate local:AddPage}"
                 Route="AddPage" />
             </Tab>
-            <Tab Title="Calendar" Icon="calendar.png">
-            <ShellContent
-                Title="Calendar"
-                ContentTemplate="{DataTemplate local:CalendarPage}"
-                Route="CalendarPage" />
-            </Tab>
-
-            
             <Tab Title="Profile" Icon="user.png">
                 <ShellContent
                 Title="Profile"
@@ -55,4 +47,4 @@
 
 
     </Shell>
-    
+

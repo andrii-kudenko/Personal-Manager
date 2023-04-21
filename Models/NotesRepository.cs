@@ -16,12 +16,12 @@ namespace PersonalManager.Models
         }
         private static void PopulateList()
         { //title 32 => 29 allowed, text 145 => 142 allowed
-            _notes.Add(new Note { Title = "listShoppinglistlistShoppinglistmynameisAndrew", Text = "1. Carrots\n2. Meat\n3. Pasta\n3. Pasta" });
-            _notes.Add(new Note
-            {
-                Title = "Project ideas",
-                Text = "1. Fitness app 2. Personal Manager 3. Mobile Game3. Mobile Game3. Mobile Game3. Mobile Game1. Fitness app1. Fitness app1. Fitness app1. Fitnessaphelloimandrew"
-            });
+            //_notes.Add(new Note { Title = "listShoppinglistlistShoppinglistmynameisAndrew", Text = "1. Carrots\n2. Meat\n3. Pasta\n3. Pasta" });
+            //_notes.Add(new Note
+            //{
+            //    Title = "Project ideas",
+            //    Text = "1. Fitness app 2. Personal Manager 3. Mobile Game3. Mobile Game3. Mobile Game3. Mobile Game1. Fitness app1. Fitness app1. Fitness app1. Fitnessaphelloimandrew"
+            //});
         }
 
         public static List<Note> GetNotes()

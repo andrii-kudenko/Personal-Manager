@@ -49,7 +49,7 @@ public partial class DashboardPage : ContentPage
         var earning = EarningsRepository.GetLastEarning();
         if (earning == null) {
             LastEarningLabel.TextColor = Colors.Grey;
-            earning = "-";
+            earning = "0";
             LastEarningLabel.Text = earning;
         }
         else
@@ -65,7 +65,7 @@ public partial class DashboardPage : ContentPage
         if (expense == null)
         {
             LastExpenseLabel.TextColor = Colors.Grey;
-            expense = "-";
+            expense = "0";
             LastExpenseLabel.Text = expense;
         }
         else
@@ -79,8 +79,8 @@ public partial class DashboardPage : ContentPage
     {
         try
         {
-            var totalExpenses = ExpensesRepository.GetTotal();
-            var totalEarnings = EarningsRepository.GetTotal();
+            double totalExpenses = ExpensesRepository.GetTotal();
+            double totalEarnings = EarningsRepository.GetTotal();
             string balance;
             if (totalEarnings > totalExpenses)
             {
@@ -98,7 +98,7 @@ public partial class DashboardPage : ContentPage
             }
             else
             {
-                balance = "-";
+                balance = "0";
                 BalanceLabel.TextColor = Colors.Grey;
             }
 

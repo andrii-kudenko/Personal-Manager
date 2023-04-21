@@ -23,6 +23,8 @@ public partial class FinancePage : ContentPage
 
         var expensesPercentages = ExpensesRepository.CalculatePercentage();
         Expense1Label.Text = expensesPercentages[0].Description;
+        if (expensesPercentages[0].Percentage > 0)
+            Expense1Label.TextColor = Colors.Red;
         Expense2Label.Text = expensesPercentages[1].Description;
         Expense3Label.Text = expensesPercentages[2].Description;
         Expense4Label.Text = expensesPercentages[3].Description;
@@ -34,13 +36,17 @@ public partial class FinancePage : ContentPage
         Expense10Label.Text = expensesPercentages[9].Description;
         Expense11Label.Text = expensesPercentages[10].Description;
 
+
         var incomePercentages = EarningsRepository.CalculatePercentage();
-        Income1Label.Text = incomePercentages[0].Description;
+        if (incomePercentages[0].Percentage > 0)
+            Income1Label.TextColor = Colors.Green;
+        Income1Label.Text = incomePercentages[0].Description; 
         Income2Label.Text = incomePercentages[1].Description;
         Income3Label.Text = incomePercentages[2].Description;
         Income4Label.Text = incomePercentages[3].Description;
         Income5Label.Text = incomePercentages[4].Description;
         Income6Label.Text = incomePercentages[5].Description;
+
 
 
         //TestLabel.Text = housing[10].Description;

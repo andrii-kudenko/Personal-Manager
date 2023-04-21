@@ -4,8 +4,8 @@
              xmlns:shapes="clr-namespace:Microsoft.Maui.Controls.Shapes;assembly=Microsoft.Maui.Controls"
              x:Class="PersonalManager.User.Profile"
              NavigationPage.HasNavigationBar="False">
-             
-             
+
+
 
     <ContentPage.Resources>
         <LinearGradientBrush x:Key="PageBackground" StartPoint="0,0" EndPoint="1,1">
@@ -15,7 +15,7 @@
             <GradientStop Color="#082C92" Offset="0.68"/>
             <GradientStop Color="#0D1F2D" Offset="0.95"/>
             <GradientStop Color="#0D1F2D" Offset="1"/>
-            
+
         </LinearGradientBrush>
     </ContentPage.Resources>
 
@@ -52,7 +52,7 @@
                                HasShadow="False"
                                WidthRequest="150"
                                BackgroundColor="#1C5F76">
-                        
+
                                     <StackLayout>
                                         <StackLayout VerticalOptions="End">
 
@@ -77,10 +77,10 @@
                                      </StackLayout>
 
                             </Frame>
-                
-                
+
+
                     </StackLayout>
-            
+
                  </Frame>
 
 
@@ -113,7 +113,7 @@
                            PlaceholderColor="#A4D4FF"
                            TextColor="#A4D4FF"/>
 
-            
+
 
                     <Entry Placeholder="Address"
                            FontSize="Small"
@@ -138,13 +138,14 @@
                                 </Picker.Items>
                             </Picker>
                             <Entry Placeholder="Phone Number"
+                                   x:Name="PhoneEntry"
                                    FontSize="Small"
                                    Margin="0,5,0,0"
                                    Text="403 871 8937"
                                    IsEnabled="False"
                                    PlaceholderColor="#A4D4FF"
                                    TextColor="#A4D4FF"/>
-                        
+
                         </StackLayout>
                     <Label
                         HorizontalOptions="End"
@@ -154,10 +155,10 @@
                             Text="Designed by Parth Manchanda"
                             FontFamily="DancingScript"
                             FontSize="Micro"/>
-                    
+
                 </StackLayout>
-                
-            </Grid>     
+
+            </Grid>
             </AbsoluteLayout>
          </Grid>
 </ContentPage>

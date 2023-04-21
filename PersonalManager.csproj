@@ -28,6 +28,7 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+		<UserSecretsId>5542605c-a630-466e-97df-6c4cac099105</UserSecretsId>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
@@ -76,10 +77,23 @@
 	  <None Remove="Class\" />
 	  <None Remove="Resources\Images\fun.jpeg" />
 	  <None Remove="Resources\Fonts\DancingScript-VariableFont_wght.ttf" />
+	  <None Remove="User\ViewModels\" />
+	  <None Remove="Resources\Images\qr %282%29.png" />
+	  <None Remove="Resources\Images\Screenshot 2023-04-21 at 7.51.52 PM.png" />
+	  <None Remove="Resources\Images\Screenshot 2023-04-21 at 9.04.16 PM.png" />
+	  <None Remove="Resources\Images\Screenshot 2023-04-21 at 10.12.12 PM.png" />
+	  <None Remove="Resources\Images\Screenshot 2023-04-21 at 10.20.47 PM.png" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="LiveCharts" Version="0.9.7" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="5.0.0" />
+		<PackageReference Include="ImageCharts" Version="6.1.250" />
+		<PackageReference Include="Syncfusion.Blazor.Charts" Version="21.1.41" />
+		<PackageReference Include="LiveCharts.WinForms" Version="0.9.7.1" />
+		<PackageReference Include="Radzen.Blazor" Version="4.10.0" />
+		<PackageReference Include="Metrics.NET" Version="0.5.5" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -138,9 +152,15 @@
 
 	<ItemGroup>
 	  <Folder Include="Class\" />
+	  <Folder Include="User\ViewModels\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\fun.jpeg" />
 	  <BundleResource Include="Resources\Fonts\DancingScript-VariableFont_wght.ttf" />
+	  <BundleResource Include="Resources\Images\code.png" />
+	  <BundleResource Include="Resources\Images\sheridan.png" />
+	  <BundleResource Include="Resources\Images\logo.png" />
+	  <BundleResource Include="Resources\Images\star.png" />
+	  <BundleResource Include="Resources\Images\yellow_star.png" />
 	</ItemGroup>
 </Project>
