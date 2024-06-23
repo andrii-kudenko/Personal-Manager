@@ -10,7 +10,7 @@ Add Page:
 ![Dashboard](images/add_expense.png)
 
 Notes List:
-![Dashboard](images/notes_list.png
+![Dashboard](images/notes_list.png)
 
 Complete Dashboard:
 ![Dashboard](images/complete_dashboard.png)
